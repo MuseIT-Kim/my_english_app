@@ -6,8 +6,6 @@ use_frameworks! inhibit_all_warnings!
 
 
 target 'my_english_app' do
- pod 'R.swift' 
- pod 'RxSwift'
  pod 'RxCocoa'
  pod 'Alamofire'
  pod 'SwiftyJSON'
