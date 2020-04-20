@@ -20,6 +20,7 @@ class Utilities {
         
         bottomLine.backgroundColor = UIColor(red: 0.6, green: 0.3, blue: 0.3, alpha: 1.0).cgColor
         
+        bottomLine.borderWidth = 3.0
         // Remove border on text field
         textfield.borderStyle = .none
         
