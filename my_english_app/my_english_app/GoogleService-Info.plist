@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>157212089410-f74og9qd0vv9grahpb52fs2e8m6673o0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.157212089410-f74og9qd0vv9grahpb52fs2e8m6673o0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAAySjKEzc9rci61fZUoIcvgI-wiXFjbc0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>157212089410</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>jp.co.museit.kim.my-english-app</string>
+	<key>PROJECT_ID</key>
+	<string>my-english-app-f5a20</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-english-app-f5a20.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:157212089410:ios:3fa8d44c1093233bb361db</string>
+	<key>DATABASE_URL</key>
+	<string>https://my-english-app-f5a20.firebaseio.com</string>
+</dict>
+</plist>
