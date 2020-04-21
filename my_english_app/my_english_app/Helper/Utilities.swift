@@ -29,14 +29,12 @@ class Utilities {
         
     }
     
-    
-    //inputPassword.layer.borderColor = UIColor(red: 0.6, green: 0.3, blue: 0.3, alpha: 1.0).cgColor
-    //inputPassword.layer.borderWidth = 3.0
-    
+ 
     static func styleFilledButton(_ button:UIButton) {
         
         // Filled rounded corner style
-        button.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+        button.backgroundColor = UIColor.init(red: 25/255, green: 178/255, blue: 251/255, alpha: 1)
+        //UIColor(red: 0.1, green: 0.7, blue: 0.9, alpha: 1.0).cgColor
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.white
     }
@@ -48,6 +46,26 @@ class Utilities {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.black
+    }
+    
+
+    static func isValidEmail(_ email : String?) -> Bool {
+        
+        let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
+        return pred.evaluate(with: email)
+    }
+    
+    
+    static func isValidPassword(_ password : String?) -> Bool {
+        //passwordチェック
+        // at least one uppercase,
+        // at least one digit
+        // at least one lowercase
+        // 8 characters total
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+        return passwordTest.evaluate(with: password)
     }
     
 }

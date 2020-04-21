@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1027D6244ED07C00D7A89A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1027D5244ED07C00D7A89A /* Constants.swift */; };
 		3C2F35E9244D48C4008D24AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F35E8244D48C4008D24AC /* GoogleService-Info.plist */; };
 		3C2F35EB244D5DF4008D24AC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F35EA244D5DF4008D24AC /* SignUpViewController.swift */; };
 		3C2F35ED244D5E18008D24AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F35EC244D5E18008D24AC /* LoginViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		1924DE86A98B14235CFE12F5 /* Pods-my_english_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my_english_app.debug.xcconfig"; path = "Target Support Files/Pods-my_english_app/Pods-my_english_app.debug.xcconfig"; sourceTree = "<group>"; };
 		25D1399F0513081875E42D7F /* Pods_my_english_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_my_english_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1027D5244ED07C00D7A89A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3C2F35E8244D48C4008D24AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C2F35EA244D5DF4008D24AC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3C2F35EC244D5E18008D24AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1027D4244ED02E00D7A89A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3C4B23A4244DAA5200A3CE4B /* Utilities.swift */,
+				3C1027D5244ED07C00D7A89A /* Constants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		3C2F35F0244D5E54008D24AC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +97,7 @@
 			children = (
 				3CBA45202447EDF6004007E1 /* AppDelegate.swift */,
 				3CBA45222447EDF6004007E1 /* SceneDelegate.swift */,
-				3C4B23A4244DAA5200A3CE4B /* Utilities.swift */,
+				3C1027D4244ED02E00D7A89A /* Helper */,
 				3C2F35F0244D5E54008D24AC /* ViewController */,
 				3CBA45262447EDF6004007E1 /* Main.storyboard */,
 				3CBA45292447EDF8004007E1 /* Assets.xcassets */,
@@ -237,6 +248,7 @@
 				3C2F35ED244D5E18008D24AC /* LoginViewController.swift in Sources */,
 				3CBA45232447EDF6004007E1 /* SceneDelegate.swift in Sources */,
 				3C2F35EF244D5E43008D24AC /* HomeViewController.swift in Sources */,
+				3C1027D6244ED07C00D7A89A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

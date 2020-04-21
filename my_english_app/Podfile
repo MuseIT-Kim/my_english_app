@@ -13,5 +13,8 @@ target 'my_english_app' do
  pod 'EmptyDataSet-Swift'
  pod 'Firebase/Analytics'
  pod 'Firebase/Auth'
+ pod 'Firebase/Core'
+ pod 'Firebase/Firestore'
+ pod 'FirebaseFirestoreSwift'
 
 end
