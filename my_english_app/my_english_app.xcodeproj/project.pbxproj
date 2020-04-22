@@ -13,6 +13,7 @@
 		3C2F35ED244D5E18008D24AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F35EC244D5E18008D24AC /* LoginViewController.swift */; };
 		3C2F35EF244D5E43008D24AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F35EE244D5E43008D24AC /* HomeViewController.swift */; };
 		3C4B23A5244DAA5200A3CE4B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B23A4244DAA5200A3CE4B /* Utilities.swift */; };
+		3C6750FE24502E400000A134 /* loginbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3C6750FD24502E400000A134 /* loginbg.mp4 */; };
 		3CBA45212447EDF6004007E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA45202447EDF6004007E1 /* AppDelegate.swift */; };
 		3CBA45232447EDF6004007E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA45222447EDF6004007E1 /* SceneDelegate.swift */; };
 		3CBA45252447EDF6004007E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA45242447EDF6004007E1 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		3C2F35EC244D5E18008D24AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C2F35EE244D5E43008D24AC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3C4B23A4244DAA5200A3CE4B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		3C6750FD24502E400000A134 /* loginbg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = loginbg.mp4; path = ../../../../Downloads/loginbg.mp4; sourceTree = "<group>"; };
 		3CBA451D2447EDF6004007E1 /* my_english_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = my_english_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBA45202447EDF6004007E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CBA45222447EDF6004007E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		3C6750FA24501EFC0000A134 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				3C6750FD24502E400000A134 /* loginbg.mp4 */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		3CBA45142447EDF6004007E1 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		3CBA451F2447EDF6004007E1 /* my_english_app */ = {
 			isa = PBXGroup;
 			children = (
+				3C6750FA24501EFC0000A134 /* Media */,
 				3CBA45202447EDF6004007E1 /* AppDelegate.swift */,
 				3CBA45222447EDF6004007E1 /* SceneDelegate.swift */,
 				3C1027D4244ED02E00D7A89A /* Helper */,
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CBA452D2447EDF8004007E1 /* LaunchScreen.storyboard in Resources */,
+				3C6750FE24502E400000A134 /* loginbg.mp4 in Resources */,
 				3C2F35E9244D48C4008D24AC /* GoogleService-Info.plist in Resources */,
 				3CBA452A2447EDF8004007E1 /* Assets.xcassets in Resources */,
 				3CBA45282447EDF6004007E1 /* Main.storyboard in Resources */,
