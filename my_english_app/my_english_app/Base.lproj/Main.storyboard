@@ -143,17 +143,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZI-ef-pJu">
-                                <rect key="frame" x="169" y="437.5" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5dJ-nH-PjL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZJE-RY-TtM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="939-5v-gfG">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                                <color key="backgroundColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PvD-8B-BwR">
+                                        <rect key="frame" x="0.0" y="204.5" width="414" height="204.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVa-nV-pxs">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                                <color key="backgroundColor" red="0.35294117650000001" green="0.94901960780000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DdD-OK-CtQ">
+                                        <rect key="frame" x="0.0" y="409" width="414" height="204.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7x-oO-xhO">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                                <color key="backgroundColor" red="1" green="0.98415905979999996" blue="0.29454257659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xx4-FT-qya">
+                                        <rect key="frame" x="0.0" y="613.5" width="414" height="204.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOv-Vd-8qp">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xx4-FT-qya" firstAttribute="height" secondItem="ZJE-RY-TtM" secondAttribute="height" id="40x-b5-3Ss"/>
+                                    <constraint firstItem="DdD-OK-CtQ" firstAttribute="height" secondItem="ZJE-RY-TtM" secondAttribute="height" id="XSH-fx-d3n"/>
+                                    <constraint firstItem="PvD-8B-BwR" firstAttribute="height" secondItem="ZJE-RY-TtM" secondAttribute="height" id="cI6-60-Q39"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xZI-ef-pJu" firstAttribute="centerY" secondItem="Hgv-tD-caz" secondAttribute="centerY" id="et4-eM-Ve2"/>
-                            <constraint firstItem="xZI-ef-pJu" firstAttribute="centerX" secondItem="Hgv-tD-caz" secondAttribute="centerX" id="gs6-yQ-Let"/>
+                            <constraint firstItem="ZVZ-8O-mdn" firstAttribute="bottom" secondItem="5dJ-nH-PjL" secondAttribute="bottom" id="DPm-sP-j6v"/>
+                            <constraint firstItem="5dJ-nH-PjL" firstAttribute="leading" secondItem="ZVZ-8O-mdn" secondAttribute="leading" id="Ohs-Ca-TVc"/>
+                            <constraint firstItem="ZVZ-8O-mdn" firstAttribute="trailing" secondItem="5dJ-nH-PjL" secondAttribute="trailing" id="VNm-cu-fJt"/>
+                            <constraint firstItem="5dJ-nH-PjL" firstAttribute="top" secondItem="ZVZ-8O-mdn" secondAttribute="top" id="sBj-5k-8Tt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZVZ-8O-mdn"/>
                     </view>
