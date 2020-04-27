@@ -12,6 +12,8 @@
 		3C2F35EB244D5DF4008D24AC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F35EA244D5DF4008D24AC /* SignUpViewController.swift */; };
 		3C2F35ED244D5E18008D24AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F35EC244D5E18008D24AC /* LoginViewController.swift */; };
 		3C2F35EF244D5E43008D24AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F35EE244D5E43008D24AC /* HomeViewController.swift */; };
+		3C3D89F92456C67B00D98136 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D89F82456C67B00D98136 /* LearnViewController.swift */; };
+		3C3D89FB2456DE3D00D98136 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D89FA2456DE3D00D98136 /* ReviewViewController.swift */; };
 		3C4B23A5244DAA5200A3CE4B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B23A4244DAA5200A3CE4B /* Utilities.swift */; };
 		3C6750FE24502E400000A134 /* loginbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3C6750FD24502E400000A134 /* loginbg.mp4 */; };
 		3CBA45212447EDF6004007E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA45202447EDF6004007E1 /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 		3C2F35EA244D5DF4008D24AC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3C2F35EC244D5E18008D24AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C2F35EE244D5E43008D24AC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3C3D89F82456C67B00D98136 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		3C3D89FA2456DE3D00D98136 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		3C4B23A4244DAA5200A3CE4B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3C6750FD24502E400000A134 /* loginbg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = loginbg.mp4; path = ../../../../Downloads/loginbg.mp4; sourceTree = "<group>"; };
 		3CBA451D2447EDF6004007E1 /* my_english_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = my_english_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +76,8 @@
 				3C2F35EC244D5E18008D24AC /* LoginViewController.swift */,
 				3C2F35EE244D5E43008D24AC /* HomeViewController.swift */,
 				3CBA45242447EDF6004007E1 /* ViewController.swift */,
+				3C3D89F82456C67B00D98136 /* LearnViewController.swift */,
+				3C3D89FA2456DE3D00D98136 /* ReviewViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -255,6 +261,8 @@
 			files = (
 				3CBA45252447EDF6004007E1 /* ViewController.swift in Sources */,
 				3CBA45212447EDF6004007E1 /* AppDelegate.swift in Sources */,
+				3C3D89FB2456DE3D00D98136 /* ReviewViewController.swift in Sources */,
+				3C3D89F92456C67B00D98136 /* LearnViewController.swift in Sources */,
 				3C4B23A5244DAA5200A3CE4B /* Utilities.swift in Sources */,
 				3C2F35EB244D5DF4008D24AC /* SignUpViewController.swift in Sources */,
 				3C2F35ED244D5E18008D24AC /* LoginViewController.swift in Sources */,

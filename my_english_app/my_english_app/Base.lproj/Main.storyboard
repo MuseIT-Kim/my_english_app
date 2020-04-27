@@ -153,6 +153,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
                                                 <color key="backgroundColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="LearnViewTapped:" destination="0SP-cu-1QR" eventType="touchUpInside" id="SKP-gE-lip"/>
+                                                    <segue destination="QuV-d2-OXH" kind="show" identifier="showLearnView" id="cqp-3x-XTt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -163,6 +167,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
                                                 <color key="backgroundColor" red="0.35294117650000001" green="0.94901960780000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="ReviewViewButtonTapped:" destination="0SP-cu-1QR" eventType="touchUpInside" id="c6o-FS-mmE"/>
+                                                    <segue destination="oh7-Jh-Xdt" kind="presentation" identifier="next" id="01D-oR-Min"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -203,10 +211,56 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZVZ-8O-mdn"/>
                     </view>
+                    <connections>
+                        <outlet property="LearnViewButton" destination="939-5v-gfG" id="WYO-wA-yiC"/>
+                        <outlet property="ReviewViewAllButton" destination="t7x-oO-xhO" id="RGc-Wt-YdR"/>
+                        <outlet property="ReviewViewButton" destination="VVa-nV-pxs" id="4pH-Gd-mM0"/>
+                        <outlet property="TestButton" destination="IOv-Vd-8qp" id="jr4-wx-lBQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czg-3j-JuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2916" y="194"/>
+        </scene>
+        <!--Learn View Controller-->
+        <scene sceneID="ZnY-aF-UMt">
+            <objects>
+                <viewController storyboardIdentifier="LearnView" id="QuV-d2-OXH" customClass="LearnViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KCb-40-GtI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LearnView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ck-ik-aKM">
+                                <rect key="frame" x="153" y="418" width="108" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="77K-E6-eK0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KEM-sc-dyc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXt-cp-pv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4037.68115942029" y="-141.29464285714286"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="qhO-LE-31L">
+            <objects>
+                <viewController storyboardIdentifier="ReviewView" id="oh7-Jh-Xdt" customClass="ReviewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jF3-r5-OVK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gXh-sy-s05"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHO-gD-1Mq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4038" y="528"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="iE6-Vu-RUN">

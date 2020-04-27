@@ -10,12 +10,38 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var LearnViewButton: UIButton!
+    
+    @IBOutlet weak var ReviewViewButton: UIButton!
+    
+    
+    @IBOutlet weak var ReviewViewAllButton: UIButton!
+    
+    @IBOutlet weak var TestButton: UIButton!
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
     }
     
-
-
+    
+    @IBAction func LearnViewTapped(_ sender: Any) {
+        
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "LearnView")
+        
+        vcName?.modalTransitionStyle = .coverVertical
+        self.present(vcName! , animated: true, completion: nil)
+        
+        /*self.performSegue(withIdentifier: "showLearnView", sender: self)*/
+    
+    }
+    
+    
+    @IBAction func ReviewViewButtonTapped(_ sender: Any) {
+     performSegue(withIdentifier: "next", sender: nil)
+    
+    }
+    
 }
