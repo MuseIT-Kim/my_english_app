@@ -225,9 +225,9 @@
         <!--Learn View Controller-->
         <scene sceneID="ZnY-aF-UMt">
             <objects>
-                <viewController storyboardIdentifier="LearnView" id="QuV-d2-OXH" customClass="LearnViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LearnView" modalPresentationStyle="fullScreen" id="QuV-d2-OXH" customClass="LearnViewController" customModule="my_english_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KCb-40-GtI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LearnView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ck-ik-aKM">
@@ -237,6 +237,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsj-u8-4pa">
+                                <rect key="frame" x="40" y="77" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="77K-E6-eK0"/>
@@ -250,13 +255,14 @@
         <!--Review View Controller-->
         <scene sceneID="qhO-LE-31L">
             <objects>
-                <viewController storyboardIdentifier="ReviewView" id="oh7-Jh-Xdt" customClass="ReviewViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReviewView" modalPresentationStyle="fullScreen" id="oh7-Jh-Xdt" customClass="ReviewViewController" customModule="my_english_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jF3-r5-OVK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gXh-sy-s05"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xZy-Dd-e4x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHO-gD-1Mq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

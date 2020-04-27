@@ -25,7 +25,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     @IBAction func LearnViewTapped(_ sender: Any) {
         
