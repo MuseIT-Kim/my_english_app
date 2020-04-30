@@ -36,39 +36,45 @@ class LearnViewController: UIViewController {
         
         
         let db = Firestore.firestore()
-        db.collection("words").whereField("id", isEqualTo: 1).getDocuments{(Snapshot,err) in
+        db.collection("words").whereField("completefg", isEqualTo: 0).getDocuments{(Snapshot,err) in
+            
+            
             if err != nil {
                 
                 print(err)
                 
-            }else {
-                
+            }
+            
                 for document in (Snapshot?.documents)!{
                     
-                    if let english = document.data()["english"] as? String{
-                        print(english)
-                        self.englishWord.text = english
-                     
+                    if let readfg = document.data()["readfg"] as? Int {
+                        
+                        switch readfg {
+                        case 0:
+                           if let english = document.data()["english"] as? String{
+                                 
+                                 self.englishWord.text = english
+                             }
+                             if let japanese = document.data()["japanese"] as? String{
+                                 
+                                 self.japanese.text = japanese
+                            }
+                            
+                           
+                        default:
+                            break
+                            }
+                        }
+                        
                     }
-                    
-                    if let japanese = document.data()["japanese"] as? String{
-                    print(japanese)
-                        self.japanese.text = japanese
-                        
-                        
-                        
-                    }
-                    
-                    
-                    
-                    
+            
                 }
             }
         }
         
-    }
+    
     
 
 
-}
+
 
