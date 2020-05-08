@@ -34,7 +34,7 @@ class LearnViewController: UIViewController {
         }
             
         
-        db.collection("words").whereField("userId", isEqualTo: userID).getDocuments{(Snapshot,err) in
+        db.collection("words").whereField("uid", isEqualTo: userID).getDocuments{(Snapshot,err) in
             
             if err != nil {
                 print(err)
@@ -43,23 +43,11 @@ class LearnViewController: UIViewController {
             for document in (Snapshot?.documents)!{
                 
                 print(document.data())
-                
-                
-                //let data = document.data()
-                
-                /*if let readfg = document.data()["newWords"] as? Int {
-                        switch readfg {
-                        case 0:
-                           if let english = document.data()["english"] as? String{
-                                 self.englishWord.text = english
-                             }
-                             if let japanese = document.data()["japanese"] as? String{
-                                 self.japanese.text = japanese
-                            }
-                            default:
-                            break
-                            }
-                        }*/
+                if let eng = document.get("uid"){
+                    
+                    self.englishWord.text = eng as! String
+                }
+               
                     }
                 }
             }
