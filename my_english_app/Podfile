@@ -17,5 +17,6 @@ target 'my_english_app' do
  pod 'Firebase/Firestore'
  pod 'FirebaseFirestoreSwift'
  pod 'Firebase/Database'
+ pod 'Firebase/Storage'
 
 end

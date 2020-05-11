@@ -231,14 +231,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="englishWord" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuC-ln-sjC">
-                                <rect key="frame" x="91" y="141" width="233" height="92"/>
+                                <rect key="frame" x="91" y="90" width="233" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPz-L4-JuO">
-                                <rect key="frame" x="91" y="293" width="233" height="92"/>
+                                <rect key="frame" x="91" y="232" width="233" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -267,6 +267,14 @@
                                     <constraint firstItem="zOK-Qj-YtG" firstAttribute="height" secondItem="zsj-u8-4pa" secondAttribute="height" id="nRg-XT-Z5s"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmz-Te-Lta">
+                                <rect key="frame" x="163" y="368" width="89" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="applicationsaudio_103765.png"/>
+                                <connections>
+                                    <action selector="tappedVoiceButton:" destination="QuV-d2-OXH" eventType="touchUpInside" id="wcu-IZ-LTc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="77K-E6-eK0"/>
@@ -439,4 +447,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="applicationsaudio_103765.png" width="512" height="512"/>
+    </resources>
 </document>
