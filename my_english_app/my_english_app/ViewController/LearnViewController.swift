@@ -16,8 +16,8 @@ import AVFoundation
 import FirebaseStorage
 
 
-
 class LearnViewController: UIViewController {
+    
     
     @IBOutlet weak var japanese: UILabel!
     @IBOutlet weak var englishWord: UILabel!
@@ -25,8 +25,15 @@ class LearnViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated:true)
     }*/
     
+    //var ref:DatabaseReference!
+    //var ref = Database.database().reference()
+    
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
     var path:String = "";
+    //var readfg :String = "";
+    
+    /*override func setValue(_ value: Any?,
+                  forKey key: String){}*/
     override func viewDidLoad() {
         
         
@@ -34,6 +41,7 @@ class LearnViewController: UIViewController {
         
         
         let db = Firestore.firestore()
+        
         let userID = Auth.auth().currentUser?.uid
         
         if let user = userID{
@@ -44,24 +52,50 @@ class LearnViewController: UIViewController {
         
         db.collection("words").whereField("uid", isEqualTo: userID).getDocuments{(Snapshot,err) in
             
+            
+            let index_ = 0
+            
             if err != nil {
                 print(err)
                 }
             
             for document in (Snapshot?.documents)!{
                 
+                let indexStr = index_.description
+                
                 print(document.data())
                 let data1 = document.data()
-                let data2 = data1["1"]
+                let data2 = data1[indexStr]
                 
                 print(data2)
-                let data3:[String:AnyObject] = data2 as! [String : AnyObject]
+                var data3:[String:AnyObject] = data2 as! [String : AnyObject]
+                let check : NSString? = data3["readfg"]! as? NSString
+                if check == "0"{
+                
+                
                 let engWd : NSString? = data3["eng"]! as? NSString
                 let jpnWd : NSString? = data3["jpn"]! as? NSString
+                
                 //let path_: NSString? = data3["voice"]! as? NSString
                 self.path = engWd as! String
                 self.englishWord.text = engWd as? String
                 self.japanese.text = jpnWd as? String
+                    data3["readfg"]?.setData(["0":"1"])
+                    
+                    /*db.collection("words").document("INoKyrahBEQrC0lDDfiV").updateData("0".)*/
+                    
+                    //self.setValue(<#T##value: Any?##Any?#>, forKeyPath: <#T##String#>)
+                   // db.collection("words").whereField("uid", isEqualTo: userID as Any).whereField(indexStr,isEqualTo: //indexStr).setValue("1", forKey: "readfg")
+                    
+                  print(data2)
+                    
+                }
+                
+                else {
+                    
+                    
+                    
+                }
             
             
             }
