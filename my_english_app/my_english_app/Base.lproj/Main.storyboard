@@ -152,7 +152,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="939-5v-gfG">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
                                                 <color key="backgroundColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="学習"/>
                                                 <connections>
                                                     <action selector="LearnViewTapped:" destination="0SP-cu-1QR" eventType="touchUpInside" id="SKP-gE-lip"/>
                                                     <segue destination="QuV-d2-OXH" kind="show" identifier="showLearnView" id="cqp-3x-XTt"/>
@@ -250,9 +251,12 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsj-u8-4pa">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="89.5"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="学習しました！">
                                             <color key="titleColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedOk:" destination="QuV-d2-OXH" eventType="touchUpInside" id="69j-J8-Zzl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOK-Qj-YtG">
                                         <rect key="frame" x="0.0" y="89.5" width="334" height="89.5"/>
@@ -275,14 +279,23 @@
                                     <action selector="tappedVoiceButton:" destination="QuV-d2-OXH" eventType="touchUpInside" id="wcu-IZ-LTc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gg-lJ-2eY">
+                                <rect key="frame" x="91" y="522" width="233" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="77K-E6-eK0"/>
                     </view>
                     <navigationItem key="navigationItem" id="KEM-sc-dyc"/>
                     <connections>
-                        <outlet property="englishWord" destination="QuC-ln-sjC" id="qLc-D5-YsJ"/>
-                        <outlet property="japanese" destination="wPz-L4-JuO" id="gNd-Aa-0Qh"/>
+                        <outlet property="doneButton" destination="zsj-u8-4pa" id="PPe-0k-m6b"/>
+                        <outlet property="englishWord" destination="QuC-ln-sjC" id="Rge-0c-uJU"/>
+                        <outlet property="japanesWord" destination="wPz-L4-JuO" id="X6P-Oe-DDE"/>
+                        <outlet property="readfg" destination="8gg-lJ-2eY" id="IQg-Ha-5rd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXt-cp-pv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
