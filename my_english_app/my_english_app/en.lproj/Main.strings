@@ -1,0 +1,60 @@
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "0iL-sH-j8z"; */
+"0iL-sH-j8z.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "学習"; ObjectID = "939-5v-gfG"; */
+"939-5v-gfG.normalTitle" = "学習";
+
+/* Class = "UILabel"; text = "Error"; ObjectID = "9q6-Xy-hPI"; */
+"9q6-Xy-hPI.text" = "Error";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "CaJ-vY-5n8"; */
+"CaJ-vY-5n8.normalTitle" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "HC7-O6-2YH"; */
+"HC7-O6-2YH.normalTitle" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IOv-Vd-8qp"; */
+"IOv-Vd-8qp.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "PXe-rw-GSo"; */
+"PXe-rw-GSo.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "TG9-tk-Qp3"; */
+"TG9-tk-Qp3.placeholder" = "First Name";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "VKi-HZ-jqO"; */
+"VKi-HZ-jqO.placeholder" = "Last Name";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VVa-nV-pxs"; */
+"VVa-nV-pxs.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "YCA-Oe-ILy"; */
+"YCA-Oe-ILy.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "c3b-po-C4V"; */
+"c3b-po-C4V.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "mJU-9D-tEH"; */
+"mJU-9D-tEH.placeholder" = "email";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mmz-Te-Lta"; */
+"mmz-Te-Lta.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Error"; ObjectID = "nw2-7l-29e"; */
+"nw2-7l-29e.text" = "Error";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "t7x-oO-xhO"; */
+"t7x-oO-xhO.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Homeへ"; ObjectID = "wah-1l-48X"; */
+"wah-1l-48X.normalTitle" = "Homeへ";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "yhx-oX-nfp"; */
+"yhx-oX-nfp.placeholder" = "password";
+
+/* Class = "UIButton"; normalTitle = "未完了"; ObjectID = "zOK-Qj-YtG"; */
+"zOK-Qj-YtG.normalTitle" = "未完了";
+
+/* Class = "UIButton"; normalTitle = "学習しました！"; ObjectID = "zsj-u8-4pa"; */
+"zsj-u8-4pa.normalTitle" = "学習しました！";

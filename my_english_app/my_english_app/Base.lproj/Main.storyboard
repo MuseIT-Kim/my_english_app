@@ -167,7 +167,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVa-nV-pxs">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
                                                 <color key="backgroundColor" red="0.35294117650000001" green="0.94901960780000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="復習"/>
                                                 <connections>
                                                     <action selector="ReviewViewButtonTapped:" destination="0SP-cu-1QR" eventType="touchUpInside" id="c6o-FS-mmE"/>
                                                     <segue destination="oh7-Jh-Xdt" kind="show" id="qSg-8a-Xac"/>
@@ -251,6 +252,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsj-u8-4pa">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="89.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="学習しました！">
                                             <color key="titleColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -260,8 +262,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOK-Qj-YtG">
                                         <rect key="frame" x="0.0" y="89.5" width="334" height="89.5"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="未完了">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -286,16 +289,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wah-1l-48X">
+                                <rect key="frame" x="179" y="553" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Homeへ"/>
+                                <connections>
+                                    <action selector="tappedHomeButton_:" destination="QuV-d2-OXH" eventType="touchUpInside" id="ULL-je-2aX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="77K-E6-eK0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KEM-sc-dyc"/>
+                    <navigationItem key="navigationItem" id="SwL-fL-Lhe"/>
                     <connections>
+                        <outlet property="backButton" destination="wah-1l-48X" id="tWz-Us-17l"/>
+                        <outlet property="buttons" destination="Kpt-3Q-TtE" id="U3A-za-dXQ"/>
                         <outlet property="doneButton" destination="zsj-u8-4pa" id="PPe-0k-m6b"/>
                         <outlet property="englishWord" destination="QuC-ln-sjC" id="Rge-0c-uJU"/>
                         <outlet property="japanesWord" destination="wPz-L4-JuO" id="X6P-Oe-DDE"/>
                         <outlet property="readfg" destination="8gg-lJ-2eY" id="IQg-Ha-5rd"/>
+                        <outlet property="uncompletedButton" destination="zOK-Qj-YtG" id="NaN-Is-yUU"/>
+                        <outlet property="voiceButton" destination="mmz-Te-Lta" id="zcU-sl-441"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXt-cp-pv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -305,69 +320,97 @@
         <!--Review View Controller-->
         <scene sceneID="qhO-LE-31L">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHO-gD-1Mq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ReviewView" modalPresentationStyle="fullScreen" id="oh7-Jh-Xdt" customClass="ReviewViewController" customModule="my_english_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jF3-r5-OVK">
+                    <view key="view" contentMode="scaleToFill" id="Vz9-JZ-eid">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytq-Wb-28P">
-                                <rect key="frame" x="91" y="141" width="233" height="92"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="233" id="j0n-NG-ed9"/>
-                                    <constraint firstAttribute="height" constant="92" id="z62-3i-T20"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="reEnglishWord" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3d-NS-0k9">
+                                <rect key="frame" x="91" y="126" width="233" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hR-19-Pty">
-                                <rect key="frame" x="91" y="293" width="233" height="92"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="6GE-Cg-Y72"/>
-                                    <constraint firstAttribute="width" constant="233" id="cHh-UW-Db3"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="reJapaneseWord" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z90-mG-bhZ">
+                                <rect key="frame" x="91" y="245" width="233" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="e2G-qf-hZ0">
-                                <rect key="frame" x="40" y="660" width="334" height="179"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3l-zd-rX4">
+                                <rect key="frame" x="179" y="548" width="56" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Homeへ"/>
+                                <connections>
+                                    <action selector="tappedReHome:" destination="oh7-Jh-Xdt" eventType="touchUpInside" id="urY-de-daZ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="eF8-jf-gDV">
+                                <rect key="frame" x="40" y="629" width="334" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cua-cR-9O4">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWZ-Ef-Jg4">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="89.5"/>
-                                        <state key="normal" title="Button">
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="学習しました！">
                                             <color key="titleColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedOk:" destination="QuV-d2-OXH" eventType="touchUpInside" id="vMz-Pg-z9W"/>
+                                            <action selector="tappedReDoneButton:" destination="oh7-Jh-Xdt" eventType="touchUpInside" id="aUy-Ml-wxB"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IS-dN-R0J">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6R6-2c-j9Y">
                                         <rect key="frame" x="0.0" y="89.5" width="334" height="89.5"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="未完了">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedReUncompletedButton:" destination="oh7-Jh-Xdt" eventType="touchUpInside" id="NbX-HB-NT0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="9IS-dN-R0J" firstAttribute="width" secondItem="cua-cR-9O4" secondAttribute="width" id="0lN-bW-Yr8"/>
-                                    <constraint firstItem="9IS-dN-R0J" firstAttribute="height" secondItem="cua-cR-9O4" secondAttribute="height" id="E38-FU-enG"/>
+                                    <constraint firstItem="6R6-2c-j9Y" firstAttribute="height" secondItem="SWZ-Ef-Jg4" secondAttribute="height" id="S5v-QZ-Eu9"/>
+                                    <constraint firstItem="6R6-2c-j9Y" firstAttribute="width" secondItem="SWZ-Ef-Jg4" secondAttribute="width" id="y8V-ZK-Jzj"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9A-KM-hdf">
+                                <rect key="frame" x="179" y="449" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxO-XO-hcF">
+                                <rect key="frame" x="141" y="400" width="119" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="applicationsaudio_103765.png"/>
+                                <connections>
+                                    <action selector="reTappedVoiceButton:" destination="oh7-Jh-Xdt" eventType="touchUpInside" id="jy1-dM-rCb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="gXh-sy-s05" firstAttribute="trailing" secondItem="Ytq-Wb-28P" secondAttribute="trailing" constant="90" id="AVX-JT-gND"/>
-                            <constraint firstItem="Ytq-Wb-28P" firstAttribute="leading" secondItem="gXh-sy-s05" secondAttribute="leading" constant="91" id="Cbc-5E-aVt"/>
-                            <constraint firstItem="1hR-19-Pty" firstAttribute="leading" secondItem="gXh-sy-s05" secondAttribute="leading" constant="91" id="HOd-Wo-w7a"/>
-                            <constraint firstItem="1hR-19-Pty" firstAttribute="top" secondItem="Ytq-Wb-28P" secondAttribute="bottom" constant="60" id="If4-BA-wO1"/>
-                            <constraint firstItem="gXh-sy-s05" firstAttribute="trailing" secondItem="1hR-19-Pty" secondAttribute="trailing" constant="90" id="Vvp-az-j4S"/>
-                            <constraint firstItem="Ytq-Wb-28P" firstAttribute="top" secondItem="gXh-sy-s05" secondAttribute="top" constant="97" id="sh2-H0-Bs8"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="gXh-sy-s05"/>
+                        <viewLayoutGuide key="safeArea" id="Cwn-Ac-lTn"/>
                     </view>
                     <navigationItem key="navigationItem" id="xZy-Dd-e4x"/>
+                    <connections>
+                        <outlet property="reBackButton" destination="w3l-zd-rX4" id="eCe-SB-9MW"/>
+                        <outlet property="reButtons" destination="eF8-jf-gDV" id="Ct5-Sq-KuC"/>
+                        <outlet property="reDoneButton" destination="SWZ-Ef-Jg4" id="IYS-zC-KSn"/>
+                        <outlet property="reEnglishWord" destination="S3d-NS-0k9" id="osX-5F-cB5"/>
+                        <outlet property="reJapaneseWord" destination="z90-mG-bhZ" id="YxM-3o-Fu0"/>
+                        <outlet property="reReadfg" destination="n9A-KM-hdf" id="dHv-eI-JFq"/>
+                        <outlet property="reUncompletedButton" destination="6R6-2c-j9Y" id="Fr8-8s-4d7"/>
+                        <outlet property="reVoiceButton" destination="bxO-XO-hcF" id="x4P-FK-r9c"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aHO-gD-1Mq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4037.68115942029" y="527.67857142857144"/>
         </scene>

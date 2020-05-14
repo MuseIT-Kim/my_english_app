@@ -20,13 +20,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var TestButton: UIButton!
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        
+    }
+        
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     @IBAction func LearnViewTapped(_ sender: Any) {
