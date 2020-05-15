@@ -18,31 +18,27 @@ import FirebaseStorage
 class ReviewViewController: UIViewController {
 
     @IBOutlet weak var reEnglishWord: UILabel!
-    
     @IBOutlet weak var reJapaneseWord: UILabel!
-    
     @IBOutlet weak var reBackButton: UIButton!
-    
     @IBOutlet weak var reDoneButton: UIButton!
     @IBOutlet weak var reUncompletedButton: UIButton!
-    
     @IBOutlet weak var reVoiceButton: UIButton!
     @IBOutlet weak var reReadfg: UILabel!
-    
-    
     @IBOutlet weak var reButtons: UIStackView!
     
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
     var path:String = "";
-    var a_ = Int();
+    var reWordListIndex = Int();
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         reBackButton.isHidden = true
         reButtons.isHidden = true
         reVoiceButton.isHidden = true
+        
+        Utilities.styleHollowButton(reDoneButton)
+        Utilities.styleFilledButton(reUncompletedButton)
         
         let db = Firestore.firestore()
             
@@ -50,26 +46,16 @@ class ReviewViewController: UIViewController {
             
             if let user = userID{
                 print("userID:" + user)
-                a_ = 0;
-                //newWords2(a: a_)
-                newWords(a: a_)
+                reWordListIndex = 0;
+                newWords(a: reWordListIndex)
             }
         }
-       
-      
     func newWords(a:Int)->Any {
     
         let db = Firestore.firestore()
-               
         let userID = Auth.auth().currentUser?.uid
-        
-        
         db.collection("words").whereField("uid", isEqualTo: userID).getDocuments{(Snapshot,err) in
 
-            //let ref = db.collection("words").document(userID)
-        
-           
-        
             let index_ = a;
             if err != nil {
                 print(err)
@@ -85,7 +71,7 @@ class ReviewViewController: UIViewController {
                     self.reJapaneseWord.text = ""
                     self.reBackButton.isHidden = false
                     self.reVoiceButton.isHidden = true
-                    
+                    self.reButtons.isHidden = true
                     break;
                 }
                 
@@ -98,31 +84,21 @@ class ReviewViewController: UIViewController {
                 let engWd : NSString? = data3["eng"]! as? NSString
                 let jpnWd : NSString? = data3["jpn"]! as? NSString
                 let readFg : NSString? = data3["readfg"]! as? NSString
-                   
-                    //let path_: NSString? = data3["voice"]! as? NSString
+                
                 self.path = engWd as! String
                 self.reEnglishWord.text = engWd as? String
                 self.reJapaneseWord.text = jpnWd as? String
-                    Utilities.styleHollowButton(self.reDoneButton)
-                    Utilities.styleFilledButton(self.reUncompletedButton)
-                   
-                    //db.collection("words").document(userID!).updateData([indexStr+".readfg":"1"])
-                    self.a_ += 1;
-                  //print(data2)
-                    
-                }
-                
+                self.reVoiceButton.isHidden = false
+                self.reButtons.isHidden = false
+                self.reWordListIndex += 1;
+               }
                 else if check == "0" {
-                    
-                    self.a_ += 1;
-                    self.newWords(a: self.a_)
+                    self.reWordListIndex += 1;
+                    self.newWords(a: self.reWordListIndex)
                 }
-            
             }
-            
-                }
-        //a_ += 1;
-        return a_
+        }
+       return reWordListIndex
     }
     
     @IBAction func reTappedVoiceButton(_ sender: Any) {
@@ -151,43 +127,21 @@ class ReviewViewController: UIViewController {
                   }
               }
           }
-        }
-    
-    /*@IBAction func tappedOk(_ sender: Any) {
-        
-        newWords(a: a_)
-        
-    }*/
-    
-    
+    }
+
     @IBAction func tappedReDoneButton(_ sender: Any) {
-        newWords(a: a_)
+        newWords(a: reWordListIndex)
     }
-    
-    
     @IBAction func tappedReUncompletedButton(_ sender: Any) {
-        
-        
+        newWords(a: reWordListIndex)
     }
-    
-    
     @IBAction func tappedReHome(_ sender: Any) {
         transitionToHome()
     }
-    
-    
-    
     func transitionToHome(){
-        
         let homeViewController =
         storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
-        
-        
-    
-    
     }
-
 }

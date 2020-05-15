@@ -11,32 +11,19 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var LearnViewButton: UIButton!
-    
     @IBOutlet weak var ReviewViewButton: UIButton!
-    
-    
     @IBOutlet weak var ReviewViewAllButton: UIButton!
-    
     @IBOutlet weak var TestButton: UIButton!
-    
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        
-        
     }
-        
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
-    
-    
-    
     override func viewDidLoad() {
-        
+       
         super.viewDidLoad()
-        
     }
     
     @IBAction func LearnViewTapped(_ sender: Any) {
@@ -45,15 +32,13 @@ class HomeViewController: UIViewController {
         
         vcName?.modalTransitionStyle = .coverVertical
         self.present(vcName! , animated: true, completion: nil)
-        
-        /*self.performSegue(withIdentifier: "showLearnView", sender: self)*/
-    
     }
-    
-    
     @IBAction func ReviewViewButtonTapped(_ sender: Any) {
-     performSegue(withIdentifier: "next", sender: nil)
-    
+     
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ReviewView")
+        
+        vcName?.modalTransitionStyle = .coverVertical
+        self.present(vcName! , animated: true, completion: nil)
     }
     
 }
