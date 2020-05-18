@@ -41,4 +41,18 @@ class HomeViewController: UIViewController {
         self.present(vcName! , animated: true, completion: nil)
     }
     
+
+
+    @IBAction func AllviewViewButtonTapped(_ sender: Any) {
+        
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "AllviewView")
+        
+        vcName?.modalTransitionStyle = .coverVertical
+        self.present(vcName! , animated: true, completion: nil)
+        
+    }
+    
+
+
+
 }

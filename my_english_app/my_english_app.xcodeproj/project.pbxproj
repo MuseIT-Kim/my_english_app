@@ -23,6 +23,7 @@
 		3CBA45282447EDF6004007E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBA45262447EDF6004007E1 /* Main.storyboard */; };
 		3CBA452A2447EDF8004007E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CBA45292447EDF8004007E1 /* Assets.xcassets */; };
 		3CBA452D2447EDF8004007E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBA452B2447EDF8004007E1 /* LaunchScreen.storyboard */; };
+		3CE540DE24725A9000F0708C /* AllviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE540DD24725A9000F0708C /* AllviewViewController.swift */; };
 		D56A6FA56F8F91D069F8A38F /* Pods_my_english_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D1399F0513081875E42D7F /* Pods_my_english_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		3CBA45292447EDF8004007E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CBA452C2447EDF8004007E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CBA452E2447EDF8004007E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE540DD24725A9000F0708C /* AllviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllviewViewController.swift; sourceTree = "<group>"; };
 		985ACBBD30C3D9591CE3F0DD /* Pods-my_english_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my_english_app.release.xcconfig"; path = "Target Support Files/Pods-my_english_app/Pods-my_english_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				3CBA45242447EDF6004007E1 /* ViewController.swift */,
 				3C3D89F82456C67B00D98136 /* LearnViewController.swift */,
 				3C3D89FA2456DE3D00D98136 /* ReviewViewController.swift */,
+				3CE540DD24725A9000F0708C /* AllviewViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CE540DE24725A9000F0708C /* AllviewViewController.swift in Sources */,
 				3CBA45252447EDF6004007E1 /* ViewController.swift in Sources */,
 				3CBA45212447EDF6004007E1 /* AppDelegate.swift in Sources */,
 				3C3D89FB2456DE3D00D98136 /* ReviewViewController.swift in Sources */,
