@@ -21,20 +21,11 @@ class AllviewViewController: UIViewController{
     
     
     @IBOutlet weak var AllviewVoiceButton: UIButton!
-    
     @IBOutlet weak var AllviewBack: UIButton!
-    
-    
     @IBOutlet weak var AllviewEnglishWords: UILabel!
-    
     @IBOutlet weak var AllviewJapaneseWords: UILabel!
-    
-
     @IBOutlet weak var AllviewDone: UIButton!
-    
-
     @IBOutlet weak var AllviewUncompleted: UIButton!
-    
     @IBOutlet weak var AllviewButtons: UIStackView!
 
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
@@ -51,15 +42,11 @@ class AllviewViewController: UIViewController{
         Utilities.styleFilledButton(AllviewUncompleted)
         
         let db = Firestore.firestore()
-        
         let userID = Auth.auth().currentUser?.uid
-        
         if let user = userID{
             print("userID:" + user)
             AllviewWordListIndex = 0;
             AllNewWords(a: AllviewWordListIndex)
-            //newWords2(a: a_)
-            //newWords(a: wordListIndex)
         }
     }
     
@@ -90,9 +77,6 @@ class AllviewViewController: UIViewController{
                     
                     print(data2)
                     let data3:[String:AnyObject] = data2 as! [String : AnyObject]
-                    //let check : NSString? = data3["readfg"]! as? NSString
-                    
-                    
                     
                     let engWd : NSString? = data3["eng"]! as? NSString
                     let jpnWd : NSString? = data3["jpn"]! as? NSString
@@ -103,25 +87,18 @@ class AllviewViewController: UIViewController{
                     self.AllviewJapaneseWords.text = jpnWd as? String
                     self.AllviewVoiceButton.isHidden = false
                     self.AllviewButtons.isHidden = false
-                        self.AllviewWordListIndex += 1;
-                   
-                    
+                    self.AllviewWordListIndex += 1;
                 }
             }
            return AllviewWordListIndex
         }
-        
-    
-
     
 @IBAction func AllviewVoiceTapped(_ sender: Any) {
         var _:AVAudioPlayer = AVAudioPlayer()
               
               let storage = Storage.storage()
               let storageRef = storage.reference()
-        
               let voiceRef = storageRef.child("wordList/"+path+".mp3")
-              
               let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(path+".mp3")
              
               voiceRef.getData(maxSize: 10 * 1024 * 1024) { (data, error) in
@@ -139,25 +116,19 @@ class AllviewViewController: UIViewController{
                       }
                   }
               }
-        
+        }
+    @IBAction func TappedAllviewDoneButtone(_ sender: Any) {
+        AllNewWords(a: AllviewWordListIndex)
     }
-    
-
     @IBAction func AllviewBack(_ sender: Any) {
-    
     transitionToHome()
     }
-    
-    
     func transitionToHome(){
         let homeViewController =
         storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
-    
-
-    
 }
 
 
