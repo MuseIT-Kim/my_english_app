@@ -53,6 +53,13 @@ class HomeViewController: UIViewController {
     }
     
 
-
-
+    @IBAction func TestViewButtonTapped(_ sender: Any) {
+        
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "TestView")
+        
+        vcName?.modalTransitionStyle = .coverVertical
+        self.present(vcName! , animated: true, completion: nil)
+        
+    }
+    
 }

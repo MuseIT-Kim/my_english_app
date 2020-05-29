@@ -196,7 +196,11 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOv-Vd-8qp">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="テスト"/>
+                                                <connections>
+                                                    <action selector="TestViewButtonTapped:" destination="0SP-cu-1QR" eventType="touchUpInside" id="7Vx-ZU-Swy"/>
+                                                    <segue destination="Alm-OE-7TR" kind="show" id="uY5-O6-FQv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -221,7 +225,7 @@
                         <outlet property="LearnViewButton" destination="939-5v-gfG" id="WYO-wA-yiC"/>
                         <outlet property="ReviewViewAllButton" destination="t7x-oO-xhO" id="RGc-Wt-YdR"/>
                         <outlet property="ReviewViewButton" destination="VVa-nV-pxs" id="4pH-Gd-mM0"/>
-                        <outlet property="TestButton" destination="IOv-Vd-8qp" id="jr4-wx-lBQ"/>
+                        <outlet property="TestButton" destination="IOv-Vd-8qp" id="oLz-3g-GPu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czg-3j-JuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -423,6 +427,67 @@
             </objects>
             <point key="canvasLocation" x="4037.68115942029" y="527.67857142857144"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="SU3-4p-85V">
+            <objects>
+                <viewController storyboardIdentifier="TestView" modalPresentationStyle="fullScreen" id="Alm-OE-7TR" customClass="TestViewController" customModule="my_english_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wGo-YL-SLb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="englishWord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jR-Wn-RPM">
+                                <rect key="frame" x="109" y="160" width="196" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZh-Uu-C3X">
+                                <rect key="frame" x="99" y="387" width="217" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-17-YDp">
+                                <rect key="frame" x="99" y="469" width="217" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCd-ub-5y3">
+                                <rect key="frame" x="99" y="551" width="217" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcf-Uo-6wL">
+                                <rect key="frame" x="99" y="633" width="217" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21q-1y-zeJ">
+                                <rect key="frame" x="190" y="736" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="TappedBackButton:" destination="Alm-OE-7TR" eventType="touchUpInside" id="oPu-Nd-3XW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0ig-6u-yMe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6YD-bT-vru"/>
+                    <connections>
+                        <outlet property="BackButton" destination="21q-1y-zeJ" id="DZU-I6-ip6"/>
+                        <outlet property="TestAnswer_1" destination="MZh-Uu-C3X" id="Esl-T0-eI8"/>
+                        <outlet property="TestAnswer_2" destination="l9h-17-YDp" id="uIL-1r-9xj"/>
+                        <outlet property="TestAnswer_3" destination="UCd-ub-5y3" id="u0K-z2-bZF"/>
+                        <outlet property="TestAnswer_4" destination="Qcf-Uo-6wL" id="i0X-O1-Tgl"/>
+                        <outlet property="TestEnglishWord" destination="2jR-Wn-RPM" id="KsQ-p3-myc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ed7-xC-u5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3005.7971014492755" y="1050.6696428571429"/>
+        </scene>
         <!--Allview View Controller-->
         <scene sceneID="6RG-29-BGw">
             <objects>
@@ -516,7 +581,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lwr-ad-mBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3965.217391304348" y="1400.8928571428571"/>
+            <point key="canvasLocation" x="4038" y="1211"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="iE6-Vu-RUN">
